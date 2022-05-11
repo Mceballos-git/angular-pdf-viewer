@@ -8,23 +8,26 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
 
-  // DECLARO LA VARIABLE CON VALOR POR DEFECTO
+  // Declare the variable empty by default
   pdfSrc = '';
 
   constructor() {
 
-    function getQueryVariable() {
-      var query = window.location.search.substring( 1 );
-      const final = query.substring( 4 );
+    const getQueryParam = () => {
+      var query = window.location.search; // ?url=LinkToPfd
+
+      // Remove the first 5 characters 
+      const final = query.substring( 5 ); // LinkToPdf
+
       return final;
     }
 
-    // CARGO LA URL DEL PDF EN LA VARIABLE QUE LEE LA LIBRERIA
-    this.pdfSrc = getQueryVariable();
 
-    // IMPRIMO LA URL  DEL PDF
-    console.log( 'PDFSRC ' + this.pdfSrc );
+    // I load the data in the variable with the link to the PDF
+    this.pdfSrc = getQueryParam();
 
+    // Print in Console the PDF URL
+    console.log( 'PDFSRC -> ' + this.pdfSrc );
   }
 }
 
