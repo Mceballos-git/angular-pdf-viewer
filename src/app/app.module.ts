@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { AppRoutingModule } from './app-routing.module';
+import { VisorPdfComponent } from './visor-pdf/visor-pdf.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    VisorPdfComponent
   ],
   imports: [
     BrowserModule,
