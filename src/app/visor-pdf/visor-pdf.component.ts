@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class VisorPdfComponent implements OnInit {
 
   // Declare the variable empty by default
-  pdfSrc = '';
+  pdfSrc = '../assets/example.pdf';
 
   constructor() {}
 
